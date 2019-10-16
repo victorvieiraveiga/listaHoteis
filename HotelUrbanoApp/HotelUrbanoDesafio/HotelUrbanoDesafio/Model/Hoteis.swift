@@ -11,27 +11,27 @@ import Foundation
 
 
 
-struct HotelResults : Decodable {
+class HotelResults : Decodable {
    
-    var results : [HotelDetalhe]
+    var results : [HotelDetalhe]?
 
 }
-struct HotelDetalhe : Decodable {
-    var name: String
-    var image: String
-    var url: String
-    var description : String
-    var stars: Int
-    var amenities : [HotelAmenidades]
-    var adress: [HotelAdress]
+class HotelDetalhe : Decodable {
+    var name: String?
+    var image: String?
+    var url: String?
+    var description : String?
+    var stars: Int?
+    var amenities : [HotelAmenidades]?
+    var address: HotelAdress?
 }
 
-struct HotelAmenidades : Decodable {
-    var name: String
-    var category: String
+class HotelAmenidades : Decodable {
+    var name: String?
+    var category: String?
 }
 
-struct HotelAdress : Decodable {
-    var city: String
-    var state: String
+class HotelAdress : Decodable {
+    var city: String?
+    var state: String?
 }
