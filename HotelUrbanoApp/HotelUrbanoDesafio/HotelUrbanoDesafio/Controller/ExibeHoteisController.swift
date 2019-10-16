@@ -28,61 +28,7 @@ class ExibeHoteisController: UITableViewController {
 
         getHoteis()
         
-//        let hotelRequest = HotelRequest()
-//        hotelRequest.getHoteis { [weak self] result in
-//            switch result {
-//            case .failure(let error) :
-//                print(error)
-//            case .success(let hoteis) :
-//                self?.listaDeHoteis = hoteis
-//            }
-//
-//        }
-        
-//        if let url  = URL(string: "https://www.hurb.com/search/api?q=buzios&page=1") {
-//            let task = URLSession.shared.dataTask(with: url) { (dados, requisicao, erro) in
-//
-//                if erro == nil {
-//                    if let dadosRetorno = dados {
-//                        do {
-//                            if let objetoJson = try JSONSerialization.jsonObject(with: dadosRetorno, options: []) as? [String: Any] {
-//
-//                                 let decoder = JSONDecoder()
-//
-//                                let resultado = try decoder.decode(HotelResults.self, from: dadosRetorno)
-//                                let hotelDetalhe  = resultado.results
-//
-//                                for h in hotelDetalhe {
-//                                    print (h.name)
-//                                }
-                                
-                                
-//                                if let resultado = objetoJson["results"] as? [HotelDetalhe]  {
-//
-//                                    self.listaDeHoteis = resultado
-//                                    print (resultado)
-//
-//                                    if let nome = resultado[0].name as? String {
-//
-//                                        print ("feio")
-//                                        print (nome)
-//                                        print ("feiooo")
-//                                    }
-//                                }
-//                            }
-//
-//                        } catch  {
-//                            print ("Erro!!!")
-//                        }
-//                    }
-//                }
-//                else {
-//                    print ("Erro")
-//                }
-//
-//            }
-//            task.resume()
-//        }
+
     }
 
     // MARK: - Table view data source
@@ -99,12 +45,41 @@ class ExibeHoteisController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell : HotelCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HotelCell
 
         let hoteis = listaDeHoteis[indexPath.row]
-
-        cell.textLabel?.text = hoteis.name
-        cell.detailTextLabel?.text = hoteis.url
+        
+        var precoString: String?
+        if let preco = hoteis.price?.current_price {
+            precoString = "Diária: R$" + String(format: "%.2f", preco)
+        }
+        
+        
+        cell.labelNomeHotel.text = hoteis.name
+        cell.labelPreco.text = precoString
+        cell.labelCidade.text = hoteis.address?.city
+        cell.labelEstado.text = hoteis.address?.state
+        
+        var cont : Int = 0
+        while cont <= 3 {
+            
+            if cont == 0 {
+                cell.labelAmenidade1.text = hoteis.amenities?[cont].name
+            }
+            if cont == 1 {
+                cell.labelAmenidade2.text = hoteis.amenities?[cont].name
+            }
+            if cont == 2 {
+                cell.labelAmenidade3.text = hoteis.amenities?[cont].name
+            }
+            
+            cont = cont + 1
+        }
+        
+        //cell.labelAmenidade1
+        
+        //cell.textLabel?.text = hoteis.name
+        //cell.detailTextLabel?.text = hoteis.url
 //        for ht in hoteis.amenities {
 //            let ameName = ht.name
 //        }
@@ -123,6 +98,10 @@ class ExibeHoteisController: UITableViewController {
             self.tableView.reloadData()
             print(error)
         }
+    }
+    
+    func defineEstrelas (numStar: Int) {
+        
     }
 
 }
