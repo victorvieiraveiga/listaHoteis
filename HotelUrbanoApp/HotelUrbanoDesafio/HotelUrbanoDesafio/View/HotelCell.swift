@@ -27,17 +27,27 @@ class HotelCell: UITableViewCell {
     @IBOutlet weak var imgStar4: UIImageView!
     @IBOutlet weak var imgStar5: UIImageView!
     
-    
+    @IBOutlet weak var imgAmenities1: UIImageView!
+    @IBOutlet weak var imgAmenities2: UIImageView!
+    @IBOutlet weak var imgAmenities3: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        escondeEstrelas()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func escondeEstrelas(){
+        imgStar1.isHidden = true
+        imgStar2.isHidden = true
+        imgStar3.isHidden = true
+        imgStar4.isHidden = true
+        imgStar5.isHidden = true
     }
 
 }

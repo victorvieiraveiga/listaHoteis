@@ -77,18 +77,28 @@ class ExibeHoteisController: UITableViewController {
         switch stars {
         case 1:
             cell.imgStar1.isHidden = false
+            cell.imgStar2.isHidden = true
+            cell.imgStar3.isHidden = true
+            cell.imgStar4.isHidden = true
+            cell.imgStar5.isHidden = true
         case 2:
             cell.imgStar1.isHidden = false
             cell.imgStar2.isHidden = false
+            cell.imgStar3.isHidden = true
+            cell.imgStar4.isHidden = true
+            cell.imgStar5.isHidden = true
         case 3:
             cell.imgStar1.isHidden = false
             cell.imgStar2.isHidden = false
             cell.imgStar3.isHidden = false
+            cell.imgStar4.isHidden = true
+            cell.imgStar5.isHidden = true
         case 4:
             cell.imgStar1.isHidden = false
             cell.imgStar2.isHidden = false
             cell.imgStar3.isHidden = false
             cell.imgStar4.isHidden = false
+            cell.imgStar5.isHidden = true
         case 5:
             cell.imgStar1.isHidden = false
             cell.imgStar2.isHidden = false
