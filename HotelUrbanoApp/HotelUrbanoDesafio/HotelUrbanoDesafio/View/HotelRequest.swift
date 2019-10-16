@@ -23,32 +23,6 @@ struct HotelRequest {
         self.recursoURL = recursoURL
     }
     
-    func getHoteis (completion: @escaping(Result<[HotelDetalhe],HotelErro>) -> Void) {
-        let task = URLSession.shared.dataTask(with: recursoURL) {(data, response, error )in
-            
-            guard let jsonData = data else {
-                
-                completion(.failure(.noDataAvailable))
-                return
-            }
-            //O Erro acontece aqui.
-            do {
-                
-                let decoder = JSONDecoder()
-                let hotelResult = try decoder.decode(HotelResults.self, from: jsonData)
-                
-                let hotelDetalhe = hotelResult.results
-                
-                completion(.success(hotelDetalhe!))
-                
-            }catch {
-                completion(.failure(.canNoteProcessData))
-            }
-        }
-        task.resume()
-    }
-    
-    
     static func fetchHoteis( sucess: @escaping ([HotelDetalhe]) -> Void, failure: @escaping (Error) -> Void) {
         let  recursoString = "https://www.hurb.com/search/api?q=buzios&page=1"
         

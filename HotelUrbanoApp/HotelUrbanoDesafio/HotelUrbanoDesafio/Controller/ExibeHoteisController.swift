@@ -14,21 +14,10 @@ class ExibeHoteisController: UITableViewController {
     var listaDeHoteis : [HotelDetalhe] = []
     var isError:Bool = false
     
-//    var listaDeHoteis = [HotelDetalhe]() {
-//        didSet{
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        //chama api hoteis
         getHoteis()
-        
-
     }
 
     // MARK: - Table view data source
@@ -61,20 +50,25 @@ class ExibeHoteisController: UITableViewController {
         cell.labelEstado.text = hoteis.address?.state
         
         
-        //######### Insere Amenidades
-        var cont : Int = 0
-        while cont <= 3 {
+        //######### Insere Amenities (Maximo tres)
+        var cont : Int = 1
+        while cont < hoteis.amenities!.count  {
             
-            if cont == 0 {
-                cell.labelAmenidade1.text = hoteis.amenities?[cont].name
-            }
             if cont == 1 {
-                cell.labelAmenidade2.text = hoteis.amenities?[cont].name
+                if let amenities = hoteis.amenities?[cont].name {
+                    cell.labelAmenidade1.text = amenities
+                }
             }
             if cont == 2 {
-                cell.labelAmenidade3.text = hoteis.amenities?[cont].name
+                if let amenities = hoteis.amenities?[cont].name {
+                    cell.labelAmenidade2.text = hoteis.amenities?[cont].name
+                }
             }
-            
+            if cont == 3 {
+                if let amenities = hoteis.amenities?[cont].name {
+                    cell.labelAmenidade3.text = hoteis.amenities?[cont].name
+                }
+            }
             cont = cont + 1
         }//######### Fim Amenidades
         
@@ -122,9 +116,4 @@ class ExibeHoteisController: UITableViewController {
             print(error)
         }
     }
-    
-    func defineEstrelas (numStar: Int) {
-        
-    }
-
 }
