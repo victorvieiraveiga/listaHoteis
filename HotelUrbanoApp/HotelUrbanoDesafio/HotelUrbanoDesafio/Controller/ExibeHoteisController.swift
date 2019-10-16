@@ -60,6 +60,8 @@ class ExibeHoteisController: UITableViewController {
         cell.labelCidade.text = hoteis.address?.city
         cell.labelEstado.text = hoteis.address?.state
         
+        
+        //######### Insere Amenidades
         var cont : Int = 0
         while cont <= 3 {
             
@@ -74,15 +76,36 @@ class ExibeHoteisController: UITableViewController {
             }
             
             cont = cont + 1
-        }
+        }//######### Fim Amenidades
         
-        //cell.labelAmenidade1
-        
-        //cell.textLabel?.text = hoteis.name
-        //cell.detailTextLabel?.text = hoteis.url
-//        for ht in hoteis.amenities {
-//            let ameName = ht.name
-//        }
+        //###### Define Numero de Estrelas
+        let stars = hoteis.stars
+        switch stars {
+        case 1:
+            cell.imgStar1.isHidden = false
+        case 2:
+            cell.imgStar1.isHidden = false
+            cell.imgStar2.isHidden = false
+        case 3:
+            cell.imgStar1.isHidden = false
+            cell.imgStar2.isHidden = false
+            cell.imgStar3.isHidden = false
+        case 4:
+            cell.imgStar1.isHidden = false
+            cell.imgStar2.isHidden = false
+            cell.imgStar3.isHidden = false
+            cell.imgStar4.isHidden = false
+        case 5:
+            cell.imgStar1.isHidden = false
+            cell.imgStar2.isHidden = false
+            cell.imgStar3.isHidden = false
+            cell.imgStar4.isHidden = false
+            cell.imgStar5.isHidden = false
+        default:
+            cell.imgStar1.isHidden = false
+            cell.imgStar2.isHidden = false
+            cell.imgStar3.isHidden = false
+        }//##### Fim Numero de Estrelas
         
         return cell
     }

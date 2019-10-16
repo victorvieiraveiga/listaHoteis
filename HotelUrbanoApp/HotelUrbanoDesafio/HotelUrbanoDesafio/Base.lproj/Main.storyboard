@@ -121,37 +121,37 @@
                                             <rect key="frame" x="15" y="406" width="15" height="16"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" spacing="4" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xNx-ez-THu">
-                                            <rect key="frame" x="149" y="40" width="116" height="20"/>
+                                            <rect key="frame" x="207" y="40" width="0.0" height="0.0"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CKt-kz-fed">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CKt-kz-fed">
                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="0uV-Wu-dII"/>
                                                         <constraint firstAttribute="width" constant="20" id="xSW-Ka-zdt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="aXV-UH-Wqe">
-                                                    <rect key="frame" x="24" y="0.0" width="20" height="20"/>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="aXV-UH-Wqe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="Or8-LC-fwu"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-8d-Kyf">
-                                                    <rect key="frame" x="48" y="0.0" width="20" height="20"/>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-8d-Kyf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="DWR-Qa-K9Q"/>
                                                         <constraint firstAttribute="height" constant="20" id="gij-by-3RH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="2RK-Ww-d45">
-                                                    <rect key="frame" x="72" y="0.0" width="20" height="20"/>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="2RK-Ww-d45">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="6CK-fX-poz"/>
                                                         <constraint firstAttribute="width" constant="20" id="EFO-K0-3gb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-sP-SUW">
-                                                    <rect key="frame" x="96" y="0.0" width="20" height="20"/>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-sP-SUW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="2xa-iA-fbj"/>
                                                         <constraint firstAttribute="width" constant="20" id="N7z-Nl-Ke3"/>
@@ -197,6 +197,11 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imgFotoHotel" destination="VqT-fc-b5d" id="TB1-ps-pfq"/>
+                                    <outlet property="imgStar1" destination="CKt-kz-fed" id="xUg-Lh-h6b"/>
+                                    <outlet property="imgStar2" destination="aXV-UH-Wqe" id="NuS-Ag-ENk"/>
+                                    <outlet property="imgStar3" destination="tg8-8d-Kyf" id="GHk-Ro-6cc"/>
+                                    <outlet property="imgStar4" destination="2RK-Ww-d45" id="qcD-LB-oxz"/>
+                                    <outlet property="imgStar5" destination="nqe-sP-SUW" id="JIi-ti-4Qd"/>
                                     <outlet property="labelAmenidade1" destination="tYi-Ke-nw3" id="Ski-wz-qeL"/>
                                     <outlet property="labelAmenidade2" destination="v3E-cp-ZXw" id="lFW-KR-244"/>
                                     <outlet property="labelAmenidade3" destination="iXa-vZ-iCF" id="LYI-UZ-4a1"/>

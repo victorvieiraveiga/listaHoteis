@@ -21,6 +21,13 @@ class HotelCell: UITableViewCell {
     @IBOutlet weak var labelAmenidade2: UILabel!
     @IBOutlet weak var labelAmenidade3: UILabel!
     
+    @IBOutlet weak var imgStar1: UIImageView!
+    @IBOutlet weak var imgStar2: UIImageView!
+    @IBOutlet weak var imgStar3: UIImageView!
+    @IBOutlet weak var imgStar4: UIImageView!
+    @IBOutlet weak var imgStar5: UIImageView!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
