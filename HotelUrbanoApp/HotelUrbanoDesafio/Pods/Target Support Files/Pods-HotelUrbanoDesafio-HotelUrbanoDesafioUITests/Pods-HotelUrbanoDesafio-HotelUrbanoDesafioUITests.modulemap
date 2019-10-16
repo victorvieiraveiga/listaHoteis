@@ -1,0 +1,6 @@
+framework module Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests {
+  umbrella header "Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

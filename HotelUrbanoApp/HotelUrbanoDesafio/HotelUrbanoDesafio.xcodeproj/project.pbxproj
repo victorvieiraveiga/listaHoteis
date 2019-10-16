@@ -19,6 +19,9 @@
 		13EB1DA52355642600B9979D /* HotelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA42355642600B9979D /* HotelRequest.swift */; };
 		13EB1DA7235627B100B9979D /* HoteisDetalhe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA6235627B100B9979D /* HoteisDetalhe.swift */; };
 		13EB1DA92356891400B9979D /* HotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA82356891400B9979D /* HotelCell.swift */; };
+		1C80F3C85B9C07423269C4A2 /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9BC649AD5E4D2D2BE0DBAB /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework */; };
+		52959F44091CD53E584954FE /* Pods_HotelUrbanoDesafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A6C85F1BE87305CCD297A7 /* Pods_HotelUrbanoDesafio.framework */; };
+		F22AA9B77AF56F3C2BACC4FE /* Pods_HotelUrbanoDesafioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CE7CBEB40FBCD86473B214 /* Pods_HotelUrbanoDesafioTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,15 @@
 		13EB1DA42355642600B9979D /* HotelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelRequest.swift; sourceTree = "<group>"; };
 		13EB1DA6235627B100B9979D /* HoteisDetalhe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoteisDetalhe.swift; sourceTree = "<group>"; };
 		13EB1DA82356891400B9979D /* HotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCell.swift; sourceTree = "<group>"; };
+		1D31EE4B5BA1256B40055BD8 /* Pods-HotelUrbanoDesafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafio.release.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafio/Pods-HotelUrbanoDesafio.release.xcconfig"; sourceTree = "<group>"; };
+		30CE7CBEB40FBCD86473B214 /* Pods_HotelUrbanoDesafioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelUrbanoDesafioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3995316D1F2F16912AA84BD9 /* Pods-HotelUrbanoDesafioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafioTests.release.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafioTests/Pods-HotelUrbanoDesafioTests.release.xcconfig"; sourceTree = "<group>"; };
+		555CFD78EDECA4D94FF6C663 /* Pods-HotelUrbanoDesafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafio.debug.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafio/Pods-HotelUrbanoDesafio.debug.xcconfig"; sourceTree = "<group>"; };
+		727FD0631DA52242E4DBD842 /* Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.debug.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D9BC649AD5E4D2D2BE0DBAB /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A6C85F1BE87305CCD297A7 /* Pods_HotelUrbanoDesafio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelUrbanoDesafio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61CE7BFB2778F65347F941B /* Pods-HotelUrbanoDesafioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafioTests.debug.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafioTests/Pods-HotelUrbanoDesafioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D383415A0A12B69B48823B6A /* Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.release.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52959F44091CD53E584954FE /* Pods_HotelUrbanoDesafio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22AA9B77AF56F3C2BACC4FE /* Pods_HotelUrbanoDesafioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C80F3C85B9C07423269C4A2 /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +106,8 @@
 				132920472354F8DD00817E7B /* HotelUrbanoDesafioTests */,
 				132920522354F8DD00817E7B /* HotelUrbanoDesafioUITests */,
 				132920312354F8DA00817E7B /* Products */,
+				B181FC79F28BDEB311F61DA3 /* Pods */,
+				E698B67C4B42EF49E13EFA84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +181,30 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		B181FC79F28BDEB311F61DA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				555CFD78EDECA4D94FF6C663 /* Pods-HotelUrbanoDesafio.debug.xcconfig */,
+				1D31EE4B5BA1256B40055BD8 /* Pods-HotelUrbanoDesafio.release.xcconfig */,
+				727FD0631DA52242E4DBD842 /* Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.debug.xcconfig */,
+				D383415A0A12B69B48823B6A /* Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.release.xcconfig */,
+				C61CE7BFB2778F65347F941B /* Pods-HotelUrbanoDesafioTests.debug.xcconfig */,
+				3995316D1F2F16912AA84BD9 /* Pods-HotelUrbanoDesafioTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E698B67C4B42EF49E13EFA84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7A6C85F1BE87305CCD297A7 /* Pods_HotelUrbanoDesafio.framework */,
+				7D9BC649AD5E4D2D2BE0DBAB /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework */,
+				30CE7CBEB40FBCD86473B214 /* Pods_HotelUrbanoDesafioTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132920582354F8DD00817E7B /* Build configuration list for PBXNativeTarget "HotelUrbanoDesafio" */;
 			buildPhases = (
+				EE05486EEC4ED9AA4139DD01 /* [CP] Check Pods Manifest.lock */,
 				1329202C2354F8DA00817E7B /* Sources */,
 				1329202D2354F8DA00817E7B /* Frameworks */,
 				1329202E2354F8DA00817E7B /* Resources */,
+				021863B26B70182D3046D34F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1329205B2354F8DD00817E7B /* Build configuration list for PBXNativeTarget "HotelUrbanoDesafioTests" */;
 			buildPhases = (
+				75DD459923D653FA765CABD7 /* [CP] Check Pods Manifest.lock */,
 				132920402354F8DD00817E7B /* Sources */,
 				132920412354F8DD00817E7B /* Frameworks */,
 				132920422354F8DD00817E7B /* Resources */,
@@ -206,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1329205E2354F8DD00817E7B /* Build configuration list for PBXNativeTarget "HotelUrbanoDesafioUITests" */;
 			buildPhases = (
+				D162F61B1711E8E2A63DBAAD /* [CP] Check Pods Manifest.lock */,
 				1329204B2354F8DD00817E7B /* Sources */,
 				1329204C2354F8DD00817E7B /* Frameworks */,
 				1329204D2354F8DD00817E7B /* Resources */,
+				8AFB36E2C0F070B2079F8D5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +335,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		021863B26B70182D3046D34F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HotelUrbanoDesafio/Pods-HotelUrbanoDesafio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HotelUrbanoDesafio/Pods-HotelUrbanoDesafio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HotelUrbanoDesafio/Pods-HotelUrbanoDesafio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75DD459923D653FA765CABD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelUrbanoDesafioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AFB36E2C0F070B2079F8D5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D162F61B1711E8E2A63DBAAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE05486EEC4ED9AA4139DD01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelUrbanoDesafio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1329202C2354F8DA00817E7B /* Sources */ = {
@@ -474,6 +623,7 @@
 		};
 		132920592354F8DD00817E7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 555CFD78EDECA4D94FF6C663 /* Pods-HotelUrbanoDesafio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +642,7 @@
 		};
 		1329205A2354F8DD00817E7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D31EE4B5BA1256B40055BD8 /* Pods-HotelUrbanoDesafio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +661,7 @@
 		};
 		1329205C2354F8DD00817E7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61CE7BFB2778F65347F941B /* Pods-HotelUrbanoDesafioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +683,7 @@
 		};
 		1329205D2354F8DD00817E7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3995316D1F2F16912AA84BD9 /* Pods-HotelUrbanoDesafioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +705,7 @@
 		};
 		1329205F2354F8DD00817E7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727FD0631DA52242E4DBD842 /* Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +726,7 @@
 		};
 		132920602354F8DD00817E7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D383415A0A12B69B48823B6A /* Pods-HotelUrbanoDesafio-HotelUrbanoDesafioUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
