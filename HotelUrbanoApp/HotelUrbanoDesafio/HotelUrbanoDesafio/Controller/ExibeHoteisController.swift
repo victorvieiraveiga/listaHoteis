@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 
 class ExibeHoteisController: UITableViewController {
@@ -21,7 +22,6 @@ class ExibeHoteisController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -32,7 +32,7 @@ class ExibeHoteisController: UITableViewController {
         return listaDeHoteis.count
     }
 
-    
+    // MARK: - Table View data source - Carrega Tabela - Insere Amenities
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : HotelCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HotelCell
 
@@ -49,7 +49,7 @@ class ExibeHoteisController: UITableViewController {
         cell.labelCidade.text = hoteis.address?.city
         cell.labelEstado.text = hoteis.address?.state
         
-        
+        // MARK: - Table View data source - Carrega Tabela - Insere Amenities
         //######### Insere Amenities (Maximo tres)
         var cont : Int = 1
         while cont < hoteis.amenities!.count  {
@@ -72,6 +72,7 @@ class ExibeHoteisController: UITableViewController {
             cont = cont + 1
         }//######### Fim Amenidades
         
+        // MARK: - Table View data source - Carrega Tabela - Define Estrelas
         //###### Define Numero de Estrelas
         let stars = hoteis.stars
         switch stars {
@@ -111,10 +112,32 @@ class ExibeHoteisController: UITableViewController {
             cell.imgStar3.isHidden = false
         }//##### Fim Numero de Estrelas
         
+        // MARK: - Table View data source - Carrega Tabela - Exibe Foto Hotel
+        //###### Exibe foto do hotel
+        if let urlImagem = hoteis.image {
+            let url = URL(string: urlImagem)
+            DispatchQueue.main.async {
+                cell.imgFotoHotel.sd_setImage(with: url) { (image, erro, cache, url) in
+                    
+                    if erro != nil {
+                        //OBS Algumas urls estao classificadas como não seguras e estava dando erro.
+                        //Foi necessario editar o arquivo plist e adicionar as tags:
+                        //App Transport Security Settings: DIctionary
+                        //    >> Allow Arbitrary Loads : Bool = YES
+                        cell.imgFotoHotel.image = UIImage(named: "imagem_padrao.png")
+                    }else {
+                        print ("foto exibida")
+                    }
+                    
+                }
+            }
+        }
+        //###### Fim Exibe foto do hotel
+
         return cell
     }
 
-
+    // MARK: - Função que chama rotina para consumir API
     func getHoteis(){
         HotelRequest.fetchHoteis( sucess: { (hoteis) in
             self.isError = false
