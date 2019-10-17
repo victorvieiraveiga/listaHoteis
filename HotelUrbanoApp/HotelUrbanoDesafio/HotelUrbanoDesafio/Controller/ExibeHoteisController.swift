@@ -14,6 +14,7 @@ class ExibeHoteisController: UITableViewController {
     
     var listaDeHoteis : [HotelDetalhe] = []
     var isError:Bool = false
+    var index : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +53,7 @@ class ExibeHoteisController: UITableViewController {
         //######### Insere Amenities (Maximo tres)
         var cont : Int = 1
         var textoAmenities : String = ""
-       // hoteis.amenities!.count
+       
         for a in  hoteis.amenities! {
             if cont < 4 {
                 if cont == 1 {
@@ -60,47 +61,9 @@ class ExibeHoteisController: UITableViewController {
                 }else {
                     textoAmenities =  (textoAmenities + ", " + a.name!)
                 }
-            cont+=1
+             cont+=1
             }
         }
-        
-        
-        
-        
-        
-//        while cont < 3  {
-//
-//             if let amenities = hoteis.amenities?[cont].name {
-//                if cont <= 3 {
-//                    if cont != 3 {
-//                        if cont == 1 {
-//                            textoAmenities =   amenities
-//                        }else {
-//                            textoAmenities =  (textoAmenities + ", " + amenities)
-//                        }
-//                    }else {
-//                        textoAmenities = textoAmenities + amenities
-//                    }
-//                 }
-//            }
-//
-////            if cont == 1 {
-////                if let amenities = hoteis.amenities?[cont].name {
-////                    cell.labelAmenidade1.text = amenities
-////                }
-////            }
-////            if cont == 2 {
-////                if let amenities = hoteis.amenities?[cont].name {
-////                    cell.labelAmenidade2.text = hoteis.amenities?[cont].name
-////                }
-////            }
-////            if cont == 3 {
-////                if let amenities = hoteis.amenities?[cont].name {
-////                    cell.labelAmenidade3.text = hoteis.amenities?[cont].name
-////                }
-////            }
-//            cont = cont + 1
-//        }
         cell.labelAmenidade1.text = textoAmenities
         //######### Fim Amenidades
         
@@ -169,6 +132,16 @@ class ExibeHoteisController: UITableViewController {
 
         return cell
     }
+     // MARK: - Table View Chama Detalhe
+    //seleciona registra e vai para o detalhe
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.index = indexPath.row
+        
+        
+        self.performSegue(withIdentifier: "detalheSegue", sender: listaDeHoteis)
+    }
 
     // MARK: - Função que chama rotina para consumir API
     func getHoteis(){
@@ -180,6 +153,15 @@ class ExibeHoteisController: UITableViewController {
             self.isError = true
             self.tableView.reloadData()
             print(error)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detalheSegue" {
+            let destinoView = segue.destination as! DetalheHotelController
+            destinoView.index = self.index
+            destinoView.listaDeHoteis=listaDeHoteis
         }
     }
 }
