@@ -249,7 +249,7 @@
                         <viewLayoutGuide key="safeArea" id="b7a-B5-dmk"/>
                     </view>
                     <navigationItem key="navigationItem" id="bvO-C1-Mjk">
-                        <barButtonItem key="rightBarButtonItem" title="Localização" id="s2y-3E-d3A">
+                        <barButtonItem key="rightBarButtonItem" title="Localização" image="mapMarker4" id="s2y-3E-d3A">
                             <connections>
                                 <segue destination="mmA-Qc-Hl9" kind="show" identifier="mapaSegue" id="08w-qy-xLb"/>
                             </connections>
@@ -315,6 +315,7 @@
     <resources>
         <image name="cidade16" width="16" height="16"/>
         <image name="imagem_padrao" width="500" height="500"/>
+        <image name="mapMarker4" width="24" height="24"/>
         <image name="starFull" width="48" height="48"/>
     </resources>
 </document>
