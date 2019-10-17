@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -191,7 +191,6 @@
 				C61CE7BFB2778F65347F941B /* Pods-HotelUrbanoDesafioTests.debug.xcconfig */,
 				3995316D1F2F16912AA84BD9 /* Pods-HotelUrbanoDesafioTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

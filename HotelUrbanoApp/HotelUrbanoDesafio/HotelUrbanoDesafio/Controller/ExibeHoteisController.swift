@@ -40,9 +40,8 @@ class ExibeHoteisController: UITableViewController {
         
         var precoString: String?
         if let preco = hoteis.price?.current_price {
-            precoString = "Diária: R$" + String(format: "%.2f", preco)
+            precoString = "Diária: R$" + String(format: "%.2f", preco)//Formata preço
         }
-        
         
         cell.labelNomeHotel.text = hoteis.name
         cell.labelPreco.text = precoString
@@ -52,25 +51,58 @@ class ExibeHoteisController: UITableViewController {
         // MARK: - Table View data source - Carrega Tabela - Insere Amenities
         //######### Insere Amenities (Maximo tres)
         var cont : Int = 1
-        while cont < hoteis.amenities!.count  {
-            
-            if cont == 1 {
-                if let amenities = hoteis.amenities?[cont].name {
-                    cell.labelAmenidade1.text = amenities
+        var textoAmenities : String = ""
+       // hoteis.amenities!.count
+        for a in  hoteis.amenities! {
+            if cont < 4 {
+                if cont == 1 {
+                    textoAmenities =   a.name!
+                }else {
+                    textoAmenities =  (textoAmenities + ", " + a.name!)
                 }
+            cont+=1
             }
-            if cont == 2 {
-                if let amenities = hoteis.amenities?[cont].name {
-                    cell.labelAmenidade2.text = hoteis.amenities?[cont].name
-                }
-            }
-            if cont == 3 {
-                if let amenities = hoteis.amenities?[cont].name {
-                    cell.labelAmenidade3.text = hoteis.amenities?[cont].name
-                }
-            }
-            cont = cont + 1
-        }//######### Fim Amenidades
+        }
+        
+        
+        
+        
+        
+//        while cont < 3  {
+//
+//             if let amenities = hoteis.amenities?[cont].name {
+//                if cont <= 3 {
+//                    if cont != 3 {
+//                        if cont == 1 {
+//                            textoAmenities =   amenities
+//                        }else {
+//                            textoAmenities =  (textoAmenities + ", " + amenities)
+//                        }
+//                    }else {
+//                        textoAmenities = textoAmenities + amenities
+//                    }
+//                 }
+//            }
+//
+////            if cont == 1 {
+////                if let amenities = hoteis.amenities?[cont].name {
+////                    cell.labelAmenidade1.text = amenities
+////                }
+////            }
+////            if cont == 2 {
+////                if let amenities = hoteis.amenities?[cont].name {
+////                    cell.labelAmenidade2.text = hoteis.amenities?[cont].name
+////                }
+////            }
+////            if cont == 3 {
+////                if let amenities = hoteis.amenities?[cont].name {
+////                    cell.labelAmenidade3.text = hoteis.amenities?[cont].name
+////                }
+////            }
+//            cont = cont + 1
+//        }
+        cell.labelAmenidade1.text = textoAmenities
+        //######### Fim Amenidades
         
         // MARK: - Table View data source - Carrega Tabela - Define Estrelas
         //###### Define Numero de Estrelas
@@ -82,6 +114,7 @@ class ExibeHoteisController: UITableViewController {
             cell.imgStar3.isHidden = true
             cell.imgStar4.isHidden = true
             cell.imgStar5.isHidden = true
+            
         case 2:
             cell.imgStar1.isHidden = false
             cell.imgStar2.isHidden = false
