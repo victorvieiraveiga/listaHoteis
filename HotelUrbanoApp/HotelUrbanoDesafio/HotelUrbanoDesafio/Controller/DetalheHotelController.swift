@@ -38,14 +38,16 @@ class DetalheHotelController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "mapaSegue" {
+            let destinoView = segue.destination as! MapaController
+            let hoteis = listaDeHoteis[index!]
+            
+            destinoView.latitude = hoteis.address?.geoLocation?.lat
+            destinoView.longitude = hoteis.address?.geoLocation?.lon
+            destinoView.nomeHotel = hoteis.name
+        }
     }
-    */
 
 }

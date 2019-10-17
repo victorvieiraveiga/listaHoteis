@@ -249,7 +249,11 @@
                         <viewLayoutGuide key="safeArea" id="b7a-B5-dmk"/>
                     </view>
                     <navigationItem key="navigationItem" id="bvO-C1-Mjk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="s2y-3E-d3A"/>
+                        <barButtonItem key="rightBarButtonItem" title="Localização" id="s2y-3E-d3A">
+                            <connections>
+                                <segue destination="mmA-Qc-Hl9" kind="show" identifier="mapaSegue" id="08w-qy-xLb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imgFotoHotel" destination="dcA-iC-DYK" id="zFr-El-i15"/>
@@ -260,6 +264,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcU-pz-L71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2205.7971014492755" y="68.973214285714278"/>
+        </scene>
+        <!--Mapa Controller-->
+        <scene sceneID="mbo-xc-oXh">
+            <objects>
+                <viewController id="mmA-Qc-Hl9" customClass="MapaController" customModule="HotelUrbanoDesafio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xa-OT-6Tg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vfz-hx-FoB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mmA-Qc-Hl9" id="w6G-v8-lzn"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dBP-LX-BKL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="meA-mZ-Ft4"/>
+                    <connections>
+                        <outlet property="mapView" destination="vfz-hx-FoB" id="pW2-Oa-L9Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADn-Nq-YQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3001" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qhd-cw-DTv">

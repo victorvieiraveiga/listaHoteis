@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 
 
@@ -35,8 +36,14 @@ class HotelAmenidades : Decodable {
 class HotelAdress : Decodable {
     var city: String?
     var state: String?
+    var geoLocation : HotelGeoLocalizacao?
 }
 
 class HotelPrice : Decodable {
     var current_price : Float?
+}
+
+class HotelGeoLocalizacao : Decodable {
+    var lat : CLLocationDegrees?
+    var lon : CLLocationDegrees?
 }
