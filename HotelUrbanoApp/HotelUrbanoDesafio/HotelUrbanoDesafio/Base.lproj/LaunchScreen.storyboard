@@ -19,40 +19,42 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desafio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-5d-ISd">
                                 <rect key="frame" x="100" y="130" width="214" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="SHD-6w-e6O"/>
+                                    <constraint firstAttribute="height" constant="65" id="4Ff-pM-G3D"/>
+                                    <constraint firstAttribute="width" constant="214" id="ROI-FQ-gvL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Urbano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-fU-1MW">
-                                <rect key="frame" x="100" y="219" width="214" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="wqD-lw-4q2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hurb_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gET-J8-FOE">
                                 <rect key="frame" x="100" y="310" width="214" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="VYS-QN-0ST"/>
-                                    <constraint firstAttribute="height" constant="200" id="aRg-pJ-P8O"/>
+                                    <constraint firstAttribute="width" constant="214" id="3yf-nd-vJI"/>
+                                    <constraint firstAttribute="height" constant="200" id="7gR-Jk-EJA"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Urbano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-fU-1MW">
+                                <rect key="frame" x="100" y="233" width="214" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="buT-Kg-9Kb"/>
+                                    <constraint firstAttribute="height" constant="33" id="l47-an-8Oc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VI1-fU-1MW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="0oa-di-cdy"/>
-                            <constraint firstItem="gET-J8-FOE" firstAttribute="top" secondItem="VI1-fU-1MW" secondAttribute="bottom" constant="58" id="Bwb-3y-dHe"/>
-                            <constraint firstItem="VI1-fU-1MW" firstAttribute="top" secondItem="5Oy-5d-ISd" secondAttribute="bottom" constant="24" id="COD-ip-g7B"/>
-                            <constraint firstItem="gET-J8-FOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="HMA-48-QHL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VI1-fU-1MW" secondAttribute="trailing" constant="100" id="K6O-JW-r7G"/>
-                            <constraint firstItem="5Oy-5d-ISd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="LOO-Uf-hhQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gET-J8-FOE" secondAttribute="trailing" constant="100" id="UU9-qB-eH6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Oy-5d-ISd" secondAttribute="trailing" constant="100" id="Xra-fI-ZVY"/>
-                            <constraint firstItem="5Oy-5d-ISd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="buc-JX-fZf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VI1-fU-1MW" secondAttribute="trailing" constant="100" id="9a9-Ro-5uE"/>
+                            <constraint firstItem="VI1-fU-1MW" firstAttribute="top" secondItem="5Oy-5d-ISd" secondAttribute="bottom" constant="38" id="JV7-UO-qur"/>
+                            <constraint firstItem="VI1-fU-1MW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Jdu-7X-nut"/>
+                            <constraint firstItem="gET-J8-FOE" firstAttribute="top" secondItem="VI1-fU-1MW" secondAttribute="bottom" constant="44" id="MQ7-gd-Mtv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gET-J8-FOE" secondAttribute="trailing" constant="100" id="R5Z-hi-wTj"/>
+                            <constraint firstItem="5Oy-5d-ISd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="YTk-Ve-hQm"/>
+                            <constraint firstItem="gET-J8-FOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="aeF-Cb-h7a"/>
+                            <constraint firstItem="5Oy-5d-ISd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="gRn-ec-Ule"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Oy-5d-ISd" secondAttribute="trailing" constant="100" id="rzP-hg-zE3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

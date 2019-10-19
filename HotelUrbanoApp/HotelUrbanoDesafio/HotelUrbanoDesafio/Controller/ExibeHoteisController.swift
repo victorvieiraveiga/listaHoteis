@@ -9,150 +9,126 @@
 import UIKit
 import SDWebImage
 
+struct sectionTitle {
+    var title : String?
+    //var hoteis : [HotelDetalhe] = []
+}
+
+var tituloHeader = [sectionTitle]()
+
+
 
 class ExibeHoteisController: UITableViewController {
     
     var listaDeHoteis : [HotelDetalhe] = []
     var isError:Bool = false
     var index : Int?
-    
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //chama api hoteis
+        navigationItem.title = "Hotéis"
+        //navigationController?.navigationBar.prefersLargeTitles = true
+        
+//        tituloHeader = [sectionTitle(title: "Pacotes"),
+//                        sectionTitle(title: "Hospedagem")]
+        
         getHoteis()
+        
     }
-
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return listaDeHoteis.count
+       
+        
+        
+        return   listaDeHoteis.count //listaDeHoteis.count//hoteis!.count
     }
+  
 
-    // MARK: - Table View data source - Carrega Tabela - Insere Amenities
+    // MARK: - Table View data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : HotelCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HotelCell
-
+        
+        let stars = listaDeHoteis[indexPath.section].stars
         let hoteis = listaDeHoteis[indexPath.row]
         
-        var precoString: String?
-        if let preco = hoteis.price?.current_price {
-            precoString = "Diária: R$" + String(format: "%.2f", preco)//Formata preço
-        }
-        
-        cell.labelNomeHotel.text = hoteis.name
-        cell.labelPreco.text = precoString
-        cell.labelCidade.text = hoteis.address?.city
-        cell.labelEstado.text = hoteis.address?.state
-        
-        // MARK: - Table View data source - Carrega Tabela - Insere Amenities
-        //######### Insere Amenities (Maximo tres)
-        var cont : Int = 1
-        var textoAmenities : String = ""
-       
-        for a in  hoteis.amenities! {
-            if cont < 4 {
-                if cont == 1 {
-                    textoAmenities =   a.name!
-                }else {
-                    textoAmenities =  (textoAmenities + ", " + a.name!)
-                }
-             cont+=1
-            }
-        }
-        cell.labelAmenidade1.text = textoAmenities
-        //######### Fim Amenidades
-        
-        // MARK: - Table View data source - Carrega Tabela - Define Estrelas
-        //###### Define Numero de Estrelas
-        let stars = hoteis.stars
-        switch stars {
-        case 1:
-            cell.imgStar1.isHidden = false
-            cell.imgStar2.isHidden = true
-            cell.imgStar3.isHidden = true
-            cell.imgStar4.isHidden = true
-            cell.imgStar5.isHidden = true
-            
-        case 2:
-            cell.imgStar1.isHidden = false
-            cell.imgStar2.isHidden = false
-            cell.imgStar3.isHidden = true
-            cell.imgStar4.isHidden = true
-            cell.imgStar5.isHidden = true
-        case 3:
-            cell.imgStar1.isHidden = false
-            cell.imgStar2.isHidden = false
-            cell.imgStar3.isHidden = false
-            cell.imgStar4.isHidden = true
-            cell.imgStar5.isHidden = true
-        case 4:
-            cell.imgStar1.isHidden = false
-            cell.imgStar2.isHidden = false
-            cell.imgStar3.isHidden = false
-            cell.imgStar4.isHidden = false
-            cell.imgStar5.isHidden = true
-        case 5:
-            cell.imgStar1.isHidden = false
-            cell.imgStar2.isHidden = false
-            cell.imgStar3.isHidden = false
-            cell.imgStar4.isHidden = false
-            cell.imgStar5.isHidden = false
-        default:
-            cell.imgStar1.isHidden = false
-            cell.imgStar2.isHidden = false
-            cell.imgStar3.isHidden = false
-        }//##### Fim Numero de Estrelas
-        
-        // MARK: - Table View data source - Carrega Tabela - Exibe Foto Hotel
-        //###### Exibe foto do hotel
-        if let urlImagem = hoteis.image {
-            let url = URL(string: urlImagem)
-            DispatchQueue.main.async {
-                cell.imgFotoHotel.sd_setImage(with: url) { (image, erro, cache, url) in
-                    
-                    if erro != nil {
-                        //OBS Algumas urls estao classificadas como não seguras e estava dando erro.
-                        //Foi necessario editar o arquivo plist e adicionar as tags:
-                        //App Transport Security Settings: DIctionary
-                        //    >> Allow Arbitrary Loads : Bool = YES
-                        cell.imgFotoHotel.image = UIImage(named: "imagem_padrao.png")
-                    }else {
-                        print ("foto exibida")
-                    }
-                    
-                }
-            }
-        }
-        //###### Fim Exibe foto do hotel
+        //Chama função para preencher campos da tableview
+        cell.prepare(with: hoteis)
 
         return cell
     }
      // MARK: - Table View Chama Detalhe
-    //seleciona registra e vai para o detalhe
+    //seleciona registro e vai para o detalhe
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
         self.index = indexPath.row
-        
-        
         self.performSegue(withIdentifier: "detalheSegue", sender: listaDeHoteis)
     }
+
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        //let categoria = listaDeHoteis[section].category
+//        
+//        
+//        for h in listaDeHoteis {
+//            if h.category == "hotel" {
+//                tituloHeader[section].title = h.stars as? String
+//            }else {
+//                tituloHeader[section].title = "Pacote"
+//            }
+//        }
+//        //let stars = listaDeHoteis[section].stars
+//        return tituloHeader[section].title as! String
+//    }
+    
+//     override func tableview(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//
+//        let categoria = listaDeHoteis[section].category
+//        print ("uurururururur")
+//        print (categoria as Any)
+//        return categoria
+//    }
+    
 
     // MARK: - Função que chama rotina para consumir API
     func getHoteis(){
         HotelRequest.fetchHoteis( sucess: { (hoteis) in
+            var hotelOrdenado = [HotelDetalhe]()
+            var hotelOrdenadoFinal = [HotelDetalhe] ()
             self.isError = false
-            self.listaDeHoteis.append(contentsOf: hoteis)
+     
+            //Ordenando a lista pela quantidade de estrelas
+            for h in hoteis
+            {
+                if h.category != "hospedagem" //se categoria = hospedagem trata de Pacote e pacote não possui estrela.
+                    {
+                        hotelOrdenado = hoteis.sorted
+                        {   (hotel1, hotel2) -> Bool in
+                                guard let h1 = hotel1.stars else {return true}
+                                guard let h2 = hotel2.stars else {return true}
+                                return h1 > h2
+                        }
+                    }
+            }
+            //Ordenando pela categoria (Hotel ou Pacote)
+            hotelOrdenadoFinal = hotelOrdenado.sorted(by: { (h1, h2) -> Bool in
+                h1.category! > h2.category!
+            })
+             
+            self.listaDeHoteis.append(contentsOf: hotelOrdenadoFinal)
             self.tableView.reloadData()
         }) { (error) in
-            self.isError = true
-            self.tableView.reloadData()
-            print(error)
+                self.isError = true
+                self.tableView.reloadData()
+                print(error)
         }
     }
     
@@ -160,8 +136,13 @@ class ExibeHoteisController: UITableViewController {
         
         if segue.identifier == "detalheSegue" {
             let destinoView = segue.destination as! DetalheHotelController
+            //let hoteis = listaDeHoteis[tableView.indexPathForSelectedRow!.row]
             destinoView.index = self.index
-            destinoView.listaDeHoteis=listaDeHoteis
+            destinoView.listaDeHoteis = listaDeHoteis
+            
         }
     }
+    
+
 }
+

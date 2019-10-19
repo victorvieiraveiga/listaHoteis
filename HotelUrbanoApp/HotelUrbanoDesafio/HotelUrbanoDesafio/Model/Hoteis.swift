@@ -26,6 +26,7 @@ class HotelDetalhe : Decodable {
     var amenities : [HotelAmenidades]?
     var address: HotelAdress?
     var price : HotelPrice?
+    var category: String?
 }
 
 class HotelAmenidades : Decodable {
@@ -40,7 +41,7 @@ class HotelAdress : Decodable {
 }
 
 class HotelPrice : Decodable {
-    var current_price : Float?
+    var amountPerDay : Float?
 }
 
 class HotelGeoLocalizacao : Decodable {

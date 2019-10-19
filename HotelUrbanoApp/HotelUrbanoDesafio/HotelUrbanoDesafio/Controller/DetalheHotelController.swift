@@ -28,15 +28,24 @@ class DetalheHotelController: UIViewController {
         labelNomeHotel.text = hoteis.name
         labelDescricao.text = hoteis.description
         
-        let url = URL(string: hoteis.image!)
-        
-        imgFotoHotel.sd_setImage(with: url) { (image, erro, cache, url) in
-            if erro != nil {
-                self.imgFotoHotel.image = UIImage(named: "imagem_padrao.png")
-            }
-        }
-    }
     
+        if hoteis.category == "hospedagem" {
+            
+            self.imgFotoHotel.image = UIImage(named: "hotel-urbano.png")
+            
+        } else {
+        
+                let url = URL(string: hoteis.image!)
+            
+                imgFotoHotel.sd_setImage(with: url) { (image, erro, cache, url) in
+                
+                    if erro != nil
+                    {
+                        self.imgFotoHotel.image = UIImage(named: "imagem_padrao.png")
+                    }
+                }
+            }
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

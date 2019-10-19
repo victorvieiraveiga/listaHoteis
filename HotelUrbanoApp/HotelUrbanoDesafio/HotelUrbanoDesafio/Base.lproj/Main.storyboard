@@ -8,39 +8,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotelUrbanoDesafio" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-242" y="69"/>
-        </scene>
         <!--Exibe Hoteis Controller-->
         <scene sceneID="piW-df-WKe">
             <objects>
                 <tableViewController id="8TA-f5-PTR" customClass="ExibeHoteisController" customModule="HotelUrbanoDesafio" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="380" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w17-mQ-mjg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="380" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w17-mQ-mjg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="y7B-Jr-Mjp">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerHurb" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-Xi-Yam">
+                                    <rect key="frame" x="8" y="0.0" width="398" height="120"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="O3g-Xi-Yam" firstAttribute="trailing" secondItem="y7B-Jr-Mjp" secondAttribute="trailingMargin" id="Blr-3c-Vta"/>
+                                <constraint firstItem="O3g-Xi-Yam" firstAttribute="top" secondItem="y7B-Jr-Mjp" secondAttribute="top" id="RCY-Nt-4HD"/>
+                                <constraint firstItem="O3g-Xi-Yam" firstAttribute="leading" secondItem="y7B-Jr-Mjp" secondAttribute="leadingMargin" id="az9-Q8-wX8"/>
+                                <constraint firstItem="O3g-Xi-Yam" firstAttribute="centerY" secondItem="y7B-Jr-Mjp" secondAttribute="centerY" id="g1R-nz-9Rh"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="380" id="3mT-g6-cpi" customClass="HotelCell" customModule="HotelUrbanoDesafio" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="380"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="380" id="3mT-g6-cpi" customClass="HotelCell" customModule="HotelUrbanoDesafio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="148" width="414" height="380"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3mT-g6-cpi" id="ot7-cO-5tZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="380"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptW-Dr-Wqs">
-                                            <rect key="frame" x="15" y="90" width="384" height="17"/>
+                                            <rect key="frame" x="15" y="90" width="353" height="17"/>
                                             <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -70,7 +71,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Hotel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcx-ND-u1W">
-                                            <rect key="frame" x="15" y="38" width="384" height="21"/>
+                                            <rect key="frame" x="15" y="38" width="353" height="21"/>
                                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -116,14 +117,14 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagem_padrao" translatesAutoresizingMaskIntoConstraints="NO" id="VqT-fc-b5d">
-                                            <rect key="frame" x="0.0" y="122" width="414" height="188"/>
+                                            <rect key="frame" x="0.0" y="122" width="383" height="188"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="188" id="HEu-4q-7kf"/>
                                                 <constraint firstAttribute="width" constant="414" id="QUe-HL-vxh"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amenidade1" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYi-Ke-nw3">
-                                            <rect key="frame" x="15" y="337" width="384" height="16.5"/>
+                                            <rect key="frame" x="15" y="337" width="353" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -185,7 +186,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Hotel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wm-z5-6mj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nome Hotel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wm-z5-6mj">
                                 <rect key="frame" x="15" y="100" width="384" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -313,6 +314,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bannerHurb" width="358" height="141"/>
         <image name="cidade16" width="16" height="16"/>
         <image name="imagem_padrao" width="500" height="500"/>
         <image name="mapMarker4" width="24" height="24"/>
