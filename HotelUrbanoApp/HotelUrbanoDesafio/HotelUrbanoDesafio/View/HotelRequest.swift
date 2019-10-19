@@ -13,7 +13,7 @@ enum HotelErro: Error {
     case canNoteProcessData
 }
 
-struct HotelRequest {
+class HotelRequest {
     let recursoURL: URL
     init () {
        let  recursoString = "https://www.hurb.com/search/api?q=buzios&page=1"
@@ -23,7 +23,7 @@ struct HotelRequest {
         self.recursoURL = recursoURL
     }
     
-    static func fetchHoteis( sucess: @escaping ([HotelDetalhe]) -> Void, failure: @escaping (Error) -> Void) {
+      func fetchHoteis( sucess: @escaping ([HotelDetalhe]) -> Void, failure: @escaping (Error) -> Void) {
         let  recursoString = "https://www.hurb.com/search/api?q=buzios&page=1"
         
         if let url = URL(string: recursoString){

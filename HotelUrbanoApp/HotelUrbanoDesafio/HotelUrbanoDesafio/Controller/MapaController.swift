@@ -52,20 +52,22 @@ class MapaController: UIViewController, CLLocationManagerDelegate {
 
     func exibeHotelMapa () {
         
-        let geocoder = CLGeocoder()
+        
         let deltaLatitude : CLLocationDegrees = 0.03
         let deltaLongitude : CLLocationDegrees = 0.03
         
         let areaVisual : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLatitude, longitudeDelta: deltaLongitude)
         
-        let lat = latitude as! CLLocationDegrees
-        let lon = longitude as! CLLocationDegrees
         
-        let localizacao : CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lon)
-        
-        let regiao : MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: areaVisual )
-        
-        
+        if latitude  != nil {
+           
+            if longitude != nil {
+                let lat = latitude!
+                let lon = longitude!
+                let localizacao : CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lon)
+                let regiao : MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: areaVisual )
+
+
         let annotation  = MKPointAnnotation()
         annotation.title = nomeHotel
         //annotation.subtitle = "Endereco"
@@ -74,6 +76,8 @@ class MapaController: UIViewController, CLLocationManagerDelegate {
         self.mapView.addAnnotation(annotation)
         
         self.mapView.setRegion(regiao, animated: true)
+                    }
+                }
     }
     
     
