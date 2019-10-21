@@ -5,9 +5,9 @@ Aplicativo para dispositivo iOS (Swift) que consome o JSON exposto pela API de b
 <table>
   <tbody>
     <tr>
-      <td> <img src="image1.png" height="300" width="170" /> </td>
-      <td> <img src="image2.png" height="300" width="170" /> </td>
-      <td> <img src="Imagem 26-09-2019 às 14.43.jpg" height="300" width="170" /> </td>
+      <td> <img src="Tela0.png" height="300" width="170" /> </td>
+      <td> <img src="Tela1.png" height="300" width="170" /> </td>
+      
     </tr>
   </tbody>
 </table>
@@ -19,9 +19,9 @@ O App possui pagina de detlhe exibindo o Nome do Hotel, foto em maior tamanho e 
 <table>
   <tbody>
     <tr>
-      <td> <img src="image1.png" height="300" width="170" /> </td>
-      <td> <img src="image2.png" height="300" width="170" /> </td>
-      <td> <img src="Imagem 26-09-2019 às 14.43.jpg" height="300" width="170" /> </td>
+      <td> <img src="Tela2.png" height="300" width="170" /> </td>
+      <td> <img src="Tela3.png" height="300" width="170" /> </td>
+    
     </tr>
   </tbody>
 </table>
