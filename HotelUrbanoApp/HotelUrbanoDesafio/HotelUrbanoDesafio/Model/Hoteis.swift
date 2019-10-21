@@ -37,6 +37,7 @@ class HotelAmenidades : Decodable {
 class HotelAdress : Decodable {
     var city: String?
     var state: String?
+    var street : String?
     var geoLocation : HotelGeoLocalizacao?
 }
 

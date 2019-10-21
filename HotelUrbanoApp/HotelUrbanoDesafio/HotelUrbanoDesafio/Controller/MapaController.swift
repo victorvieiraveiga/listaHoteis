@@ -15,12 +15,14 @@ class MapaController: UIViewController, CLLocationManagerDelegate {
     var longitude :  CLLocationDegrees?
     var gerenciadorLocalizacao = CLLocationManager()
     var nomeHotel : String?
+    var endereco : String?
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        //Configurando o gerenciador de localização
         gerenciadorLocalizacao = CLLocationManager()
         gerenciadorLocalizacao.delegate = self
         gerenciadorLocalizacao.requestWhenInUseAuthorization()
@@ -28,22 +30,22 @@ class MapaController: UIViewController, CLLocationManagerDelegate {
         gerenciadorLocalizacao.startUpdatingLocation()
         gerenciadorLocalizacao.startMonitoringSignificantLocationChanges()
 
-        // Here you can check whether you have allowed the permission or not.
+        // Aqui podemos checar se o usuario liberou permissão de localização.
         if CLLocationManager.locationServicesEnabled()
             {
                 switch(CLLocationManager.authorizationStatus())
                 {
                 case .authorizedAlways, .authorizedWhenInUse:
-                    print("Authorize.")
+                    print("Autorizado.")
                     break
                 case .notDetermined:
-                    print("Not determined.")
+                    print("Não Determinado")
                     break
                 case .restricted:
-                    print("Restricted.")
+                    print("Restrito.")
                     break
                 case .denied:
-                    print("Denied.")
+                    print("Negado.")
                 }
             }
         exibeHotelMapa()
@@ -52,30 +54,28 @@ class MapaController: UIViewController, CLLocationManagerDelegate {
 
     func exibeHotelMapa () {
         
-        
+        //Define area visual(zoom) da visualização do mapa
         let deltaLatitude : CLLocationDegrees = 0.03
         let deltaLongitude : CLLocationDegrees = 0.03
-        
         let areaVisual : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLatitude, longitudeDelta: deltaLongitude)
         
-        
+        //Define Localizacao do Hotel no mapa
         if latitude  != nil {
-           
             if longitude != nil {
                 let lat = latitude!
                 let lon = longitude!
                 let localizacao : CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lon)
                 let regiao : MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: areaVisual )
-
-
-        let annotation  = MKPointAnnotation()
-        annotation.title = nomeHotel
-        //annotation.subtitle = "Endereco"
-        annotation.coordinate = localizacao
-        
-        self.mapView.addAnnotation(annotation)
-        
-        self.mapView.setRegion(regiao, animated: true)
+                
+                //Preenche parametros para o Marcador(Pin) no mapa.
+                let annotation  = MKPointAnnotation()
+                annotation.title = nomeHotel
+                annotation.subtitle = self.endereco
+                annotation.coordinate = localizacao
+                
+                self.mapView.addAnnotation(annotation)
+                
+                self.mapView.setRegion(regiao, animated: true)
                     }
                 }
     }

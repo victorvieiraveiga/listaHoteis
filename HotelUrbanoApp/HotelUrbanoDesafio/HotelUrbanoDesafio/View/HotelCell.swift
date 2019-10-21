@@ -26,6 +26,7 @@ class HotelCell: UITableViewCell {
     @IBOutlet weak var imgStar5: UIImageView!
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         escondeEstrelas()
@@ -99,61 +100,29 @@ class HotelCell: UITableViewCell {
          }
          labelAmenidade1.text = textoAmenities
 
-        
+        let stars = [self.imgStar1, self.imgStar2, self.imgStar3, self.imgStar4, self.imgStar5]
         
         //###### Define Numero de Estrelas
-        let stars = hotel.stars
-        
-        //se cateroria for hospedagem trata-se de pacote e não hotel
-        //logo esconde as estrelas
-        if hotel.category == "hospedagem" {
-            imgStar1.isHidden = true
-            imgStar2.isHidden = true
-            imgStar3.isHidden = true
-            imgStar4.isHidden = true
-            imgStar5.isHidden = true
-            
+        //Rotina para apresentar o numero de estrelas de um hotel. Caso a categoria seja pacote,no exibe estrelas
+        switch hotel.category  {
+        case "hotel":
+            for star in stars {
+                star?.isHidden = true
+            }
+            if hotel.stars != nil {
+                for i in 0...hotel.stars! - 1 {
+                     stars[i]!.isHidden = false
+                 }
+             }
+        case "pacote" :
+            for star in stars {
+                star?.isHidden = true
+            }
+        default :
+              for star in stars {
+                  star?.isHidden = true
+              }
         }
-
-        switch stars {
-        case 1:
-            imgStar1.isHidden = false
-            imgStar2.isHidden = true
-            imgStar3.isHidden = true
-            imgStar4.isHidden = true
-            imgStar5.isHidden = true
-            
-        case 2:
-            imgStar1.isHidden = false
-            imgStar2.isHidden = false
-            imgStar3.isHidden = true
-            imgStar4.isHidden = true
-            imgStar5.isHidden = true
-        case 3:
-            imgStar1.isHidden = false
-            imgStar2.isHidden = false
-            imgStar3.isHidden = false
-            imgStar4.isHidden = true
-            imgStar5.isHidden = true
-        case 4:
-            imgStar1.isHidden = false
-            imgStar2.isHidden = false
-            imgStar3.isHidden = false
-            imgStar4.isHidden = false
-            imgStar5.isHidden = true
-        case 5:
-            imgStar1.isHidden = false
-            imgStar2.isHidden = false
-            imgStar3.isHidden = false
-            imgStar4.isHidden = false
-            imgStar5.isHidden = false
-        default:
-            imgStar1.isHidden = true
-            imgStar2.isHidden = true
-            imgStar3.isHidden = true
-            imgStar4.isHidden = true
-            imgStar5.isHidden = true
-        }//##### Fim Numero de Estrelas
         
     }
 

@@ -20,7 +20,7 @@
 		1352518E235B4AAF00DC7B99 /* HotelUrbanoDesafioTestes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352518D235B4AAF00DC7B99 /* HotelUrbanoDesafioTestes.swift */; };
 		13525197235B812E00DC7B99 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13525196235B812E00DC7B99 /* Constantes.swift */; };
 		13EB1DA3235560BE00B9979D /* Hoteis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA2235560BE00B9979D /* Hoteis.swift */; };
-		13EB1DA52355642600B9979D /* HotelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA42355642600B9979D /* HotelRequest.swift */; };
+		13EB1DA52355642600B9979D /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA42355642600B9979D /* ApiRequest.swift */; };
 		13EB1DA92356891400B9979D /* HotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1DA82356891400B9979D /* HotelCell.swift */; };
 		1C80F3C85B9C07423269C4A2 /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9BC649AD5E4D2D2BE0DBAB /* Pods_HotelUrbanoDesafio_HotelUrbanoDesafioUITests.framework */; };
 		52959F44091CD53E584954FE /* Pods_HotelUrbanoDesafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A6C85F1BE87305CCD297A7 /* Pods_HotelUrbanoDesafio.framework */; };
@@ -73,7 +73,7 @@
 		1352518F235B4AAF00DC7B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13525196235B812E00DC7B99 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		13EB1DA2235560BE00B9979D /* Hoteis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hoteis.swift; sourceTree = "<group>"; };
-		13EB1DA42355642600B9979D /* HotelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelRequest.swift; sourceTree = "<group>"; };
+		13EB1DA42355642600B9979D /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		13EB1DA82356891400B9979D /* HotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCell.swift; sourceTree = "<group>"; };
 		1D31EE4B5BA1256B40055BD8 /* Pods-HotelUrbanoDesafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelUrbanoDesafio.release.xcconfig"; path = "Target Support Files/Pods-HotelUrbanoDesafio/Pods-HotelUrbanoDesafio.release.xcconfig"; sourceTree = "<group>"; };
 		30CE7CBEB40FBCD86473B214 /* Pods_HotelUrbanoDesafioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelUrbanoDesafioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +148,7 @@
 		132920322354F8DA00817E7B /* HotelUrbanoDesafio */ = {
 			isa = PBXGroup;
 			children = (
+				1352519A235BDEA000DC7B99 /* Service */,
 				13525195235B810000DC7B99 /* Suporte */,
 				132920632354F91D00817E7B /* Controller */,
 				132920622354F91500817E7B /* View */,
@@ -191,7 +192,6 @@
 		132920622354F91500817E7B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				13EB1DA42355642600B9979D /* HotelRequest.swift */,
 				13EB1DA82356891400B9979D /* HotelCell.swift */,
 			);
 			path = View;
@@ -222,6 +222,14 @@
 				13525196235B812E00DC7B99 /* Constantes.swift */,
 			);
 			path = Suporte;
+			sourceTree = "<group>";
+		};
+		1352519A235BDEA000DC7B99 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				13EB1DA42355642600B9979D /* ApiRequest.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B181FC79F28BDEB311F61DA3 /* Pods */ = {
@@ -524,7 +532,7 @@
 				13525197235B812E00DC7B99 /* Constantes.swift in Sources */,
 				1346D3DB2358D32200099E2F /* DetalheHotelController.swift in Sources */,
 				13EB1DA3235560BE00B9979D /* Hoteis.swift in Sources */,
-				13EB1DA52355642600B9979D /* HotelRequest.swift in Sources */,
+				13EB1DA52355642600B9979D /* ApiRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

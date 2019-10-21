@@ -12,11 +12,11 @@ enum HotelErro: Error {
     case noDataAvailable
     case canNoteProcessData
 }
-
-class HotelRequest {
+//Classe para fazer requisicao da API fornecida pelo Hotel Urbano
+class ApiRequest {
     let recursoURL: URL
     init () {
-       let  recursoString = "https://www.hurb.com/search/api?q=buzios&page=1"
+        let  recursoString = Constantes.URL_API
         
         guard let recursoURL = URL(string: recursoString) else {fatalError()}
         
@@ -24,7 +24,7 @@ class HotelRequest {
     }
     
       func fetchHoteis( sucess: @escaping ([HotelDetalhe]) -> Void, failure: @escaping (Error) -> Void) {
-        let  recursoString = "https://www.hurb.com/search/api?q=buzios&page=1"
+        let  recursoString = Constantes.URL_API
         
         if let url = URL(string: recursoString){
             let request = URLRequest(url: url)
