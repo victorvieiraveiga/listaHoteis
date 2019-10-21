@@ -14,10 +14,12 @@ class HotelCell: UITableViewCell {
     @IBOutlet weak var labelNomeHotel: UILabel!
     @IBOutlet weak var labelPreco: UILabel!
     @IBOutlet weak var labelCidade: UILabel!
-    @IBOutlet weak var labelEstado: UILabel!
     @IBOutlet weak var imgFotoHotel: UIImageView!
     
     @IBOutlet weak var labelAmenidade1: UILabel!
+    @IBOutlet weak var labelAmenidade2: UILabel!
+    @IBOutlet weak var labelAmenidade3: UILabel!
+    
 
     @IBOutlet weak var imgStar1: UIImageView!
     @IBOutlet weak var imgStar2: UIImageView!
@@ -54,12 +56,12 @@ class HotelCell: UITableViewCell {
         //#Preço
         var precoString: String?
         if let preco = hotel.price?.amountPerDay {
-            precoString = "Diária: R$" + String(format: "%.2f", preco)//Formata preço
+            precoString = "R$" + String(format: "%.2f", preco)//Formata preço
             labelPreco.text = precoString
         }
         //#Endereco
-        labelCidade.text = hotel.address?.city
-        labelEstado.text = hotel.address?.state
+        labelCidade.text = hotel.address!.city! + ", " + hotel.address!.state!
+        
         
         //#Foto
         if hotel.category == "hospedagem" {
@@ -86,19 +88,28 @@ class HotelCell: UITableViewCell {
         //Amenities
         //Insere Amenities (Maximo tres)
          var cont : Int = 1
-         var textoAmenities : String = ""
+         //var textoAmenities : String = ""
         
          for a in  hotel.amenities! {
              if cont < 4 {
-                 if cont == 1 {
-                     textoAmenities =   a.name!
-                 }else {
-                     textoAmenities =  (textoAmenities + ", " + a.name!)
-                 }
+                switch cont {
+                case 1:
+                    labelAmenidade1.text = a.name
+                case 2:
+                    labelAmenidade2.text = a.name
+                case 3:
+                    labelAmenidade3.text = a.name
+  
+                default:
+                    labelAmenidade1.text = ""
+                    labelAmenidade2.text = ""
+                    labelAmenidade3.text = ""
+                }
+
               cont+=1
              }
          }
-         labelAmenidade1.text = textoAmenities
+         
 
         let stars = [self.imgStar1, self.imgStar2, self.imgStar3, self.imgStar4, self.imgStar5]
         

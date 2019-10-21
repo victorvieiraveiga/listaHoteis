@@ -46,6 +46,8 @@ class MapaController: UIViewController, CLLocationManagerDelegate {
                     break
                 case .denied:
                     print("Negado.")
+                @unknown default:
+                    fatalError()
                 }
             }
         exibeHotelMapa()
