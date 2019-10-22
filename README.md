@@ -46,7 +46,12 @@ Exibe a foto em escala maior e Descrição do Hotel.
 Há um mapa para visualizar o endereço.
 
 
-#Bibliotecas de terceiros utilizadas
+# Bibliotecas de terceiros utilizadas
 
 SDWebImage, para fazer cache das imagens no dispositivo.
 
+# Testes
+Foi criado 2 testes unitários:
+
+Buscar hotéis (utilizando a API)
+Exibir o Hotel no mapa.
