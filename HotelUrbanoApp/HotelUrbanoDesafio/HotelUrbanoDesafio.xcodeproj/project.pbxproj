@@ -12,7 +12,6 @@
 		132920392354F8DA00817E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132920372354F8DA00817E7B /* Main.storyboard */; };
 		1329203B2354F8DD00817E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1329203A2354F8DD00817E7B /* Assets.xcassets */; };
 		1329203E2354F8DD00817E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1329203C2354F8DD00817E7B /* LaunchScreen.storyboard */; };
-		132920492354F8DD00817E7B /* HotelUrbanoDesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132920482354F8DD00817E7B /* HotelUrbanoDesafioTests.swift */; };
 		132920542354F8DD00817E7B /* HotelUrbanoDesafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132920532354F8DD00817E7B /* HotelUrbanoDesafioUITests.swift */; };
 		132920652354FDEB00817E7B /* ExibeHoteisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132920642354FDEB00817E7B /* ExibeHoteisController.swift */; };
 		1346D3DB2358D32200099E2F /* DetalheHotelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346D3DA2358D32200099E2F /* DetalheHotelController.swift */; };
@@ -60,8 +59,6 @@
 		1329203D2354F8DD00817E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1329203F2354F8DD00817E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132920442354F8DD00817E7B /* HotelUrbanoDesafioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelUrbanoDesafioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		132920482354F8DD00817E7B /* HotelUrbanoDesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelUrbanoDesafioTests.swift; sourceTree = "<group>"; };
-		1329204A2354F8DD00817E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1329204F2354F8DD00817E7B /* HotelUrbanoDesafioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelUrbanoDesafioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		132920532354F8DD00817E7B /* HotelUrbanoDesafioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelUrbanoDesafioUITests.swift; sourceTree = "<group>"; };
 		132920552354F8DD00817E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				132920322354F8DA00817E7B /* HotelUrbanoDesafio */,
-				132920472354F8DD00817E7B /* HotelUrbanoDesafioTests */,
 				132920522354F8DD00817E7B /* HotelUrbanoDesafioUITests */,
 				1352518C235B4AAF00DC7B99 /* HotelUrbanoDesafioTestes */,
 				132920312354F8DA00817E7B /* Products */,
@@ -161,15 +157,6 @@
 				1329203F2354F8DD00817E7B /* Info.plist */,
 			);
 			path = HotelUrbanoDesafio;
-			sourceTree = "<group>";
-		};
-		132920472354F8DD00817E7B /* HotelUrbanoDesafioTests */ = {
-			isa = PBXGroup;
-			children = (
-				132920482354F8DD00817E7B /* HotelUrbanoDesafioTests.swift */,
-				1329204A2354F8DD00817E7B /* Info.plist */,
-			);
-			path = HotelUrbanoDesafioTests;
 			sourceTree = "<group>";
 		};
 		132920522354F8DD00817E7B /* HotelUrbanoDesafioUITests */ = {
@@ -540,7 +527,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				132920492354F8DD00817E7B /* HotelUrbanoDesafioTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

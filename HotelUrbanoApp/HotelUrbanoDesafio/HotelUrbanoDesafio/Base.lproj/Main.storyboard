@@ -47,7 +47,7 @@
                                                 <constraint firstAttribute="height" constant="18" id="PqH-mG-Adh"/>
                                                 <constraint firstAttribute="width" constant="218" id="gqW-7A-3LV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

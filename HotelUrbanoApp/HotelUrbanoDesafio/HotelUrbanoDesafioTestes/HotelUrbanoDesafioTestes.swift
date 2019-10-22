@@ -12,7 +12,7 @@ import XCTest
 class HotelUrbanoDesafioTestes: XCTestCase {
 
     var exibeHotel : ExibeHoteisController!
-    var requestHotel : HotelRequest!
+    var requestHotel : ApiRequest!
     
     func testgetHoteis () {
         
@@ -31,7 +31,7 @@ class HotelUrbanoDesafioTestes: XCTestCase {
     }
     
     func testfetchHoteis() {
-        let fetchHotel = HotelRequest()
+        let fetchHotel = ApiRequest()
     
         
         XCTAssertNotNil(fetchHotel.fetchHoteis(sucess: { ([HotelDetalhe]) in}) { (error) in})
