@@ -26,3 +26,22 @@ Na tela de detalhe é possivel ver a localização do Hotel no Mapa tocando no i
     
   </tbody>
 </table>
+
+
+# API
+A API utilizada neste desafio foi do próprio Hurb, que entrega a listagem de resultados para um determinado local e outra que retorna uma lista de sugestões de lugares de acordo com o texto informado.
+
+URL:
+
+GET https://www.hurb.com/search/api?q=buzios&page=1
+
+Na URL acima, é passado como parâmetros o texto para busca, o item que será ordenado e o número da página. O documento JSON contem um nó chamado results, que contém os hotéis e pacotes de Búzios.
+
+# Funcionalidades
+
+Os hotéis estão ordenados em quantidade de estrelas (de 5 a 0) e, por último, os pacotes.
+Foram adicionadas às células de visualização do hotel como nome, preço, cidade, estado, foto, tres amenidades e uma stack exibindo o numero de estrelas do Hotel.
+Tela de detalhes do hotel ou pacote
+Exibe a foto em escala maior e Descrição do Hotel.
+Há um mapa para visualizar o endereço.
+
