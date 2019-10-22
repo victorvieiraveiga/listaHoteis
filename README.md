@@ -45,3 +45,8 @@ Tela de detalhes do hotel ou pacote
 Exibe a foto em escala maior e Descrição do Hotel.
 Há um mapa para visualizar o endereço.
 
+
+#Bibliotecas de terceiros utilizadas
+
+SDWebImage, para fazer cache das imagens no dispositivo.
+
