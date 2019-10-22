@@ -13,7 +13,7 @@ Aplicativo para dispositivo iOS (Swift) que consome o JSON exposto pela API de b
 </table>
 
 # Novas Features
-O App possui pagina de detlhe exibindo o Nome do Hotel, foto em maior tamanho e descrição.
+Ao tocar em uma celula o app abre uma pagina de detalhe exibindo o Nome do Hotel, foto em maior tamanho e descrição.
 
 
 <table>
