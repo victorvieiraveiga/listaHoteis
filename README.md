@@ -12,11 +12,6 @@ Aplicativo para dispositivo iOS (Swift) que consome o JSON exposto pela API de b
   </tbody>
 </table>
 
-# Novas Features
-Ao tocar em uma celula o app abre uma pagina de detalhe exibindo o Nome do Hotel, foto em maior tamanho e descrição. 
-Na tela de detalhe é possivel ver a localização do Hotel no Mapa tocando no icone no canto superior direito.
-
-
 <table>
   <tbody>
     <tr>
@@ -55,3 +50,7 @@ Foi criado 2 testes unitários:
 
 Buscar hotéis (utilizando a API)
 Exibir o Hotel no mapa.
+
+# Novas Features
+Ao tocar em uma celula o app abre uma pagina de detalhe exibindo o Nome do Hotel, foto em maior tamanho e descrição. 
+Na tela de detalhe é possivel ver a localização do Hotel no Mapa tocando no icone no canto superior direito.
